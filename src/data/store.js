@@ -3,16 +3,20 @@ const store = reactive({
     immagini:{
         jumbotron: ["h1-rev-img-01.jpg","rev-slider-main-home-img-02.png","rev-slider-main-home-img-03.jpg"],
         skillsIcon: [{
-            img:"svg-0.svg"
+            img:"svg-0.svg",
+            title:"Knowing"
         },
         {
-            img:"svg-1.svg"
+            img:"svg-1.svg",
+            title:"Selling"
         },
         {
-            img:"svg-2.svg"
+            img:"svg-2.svg",
+            title:"Learning"
         },
         {
-            img:"svg-3.svg"
+            img:"svg-3.svg",
+            title:"Contact"
         }],
         
         foundersImg: ["h1-img-03.jpg","h1-img-01.jpg","h1-img-02.jpg"],

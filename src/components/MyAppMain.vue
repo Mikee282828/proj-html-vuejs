@@ -47,7 +47,7 @@ export default {
     <h1>Questo è il main</h1>
 
     <Jumbotron />
-    <Specialties />
+    <Specialties :cardInfo="store.immagini.skillsIcon"/>
     <Founder />
     <Events />
     <Stats />
