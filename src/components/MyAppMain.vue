@@ -14,7 +14,7 @@ import Stats from "./mainComponents/Stats.vue";
 import Testimonials from "./mainComponents/Testimonials.vue";
 export default {
     name: "MyAppMain",
-    components:{
+    components: {
         Jumbotron,
         Achievements,
         Bigvideo,
@@ -28,20 +28,22 @@ export default {
         Stats,
         Testimonials
     },
-        data() {
-    return {
-        store
+    data() {
+        return {
+            store
+        }
+    },
+    methods: {
+        getImg(path,name){
+            return new URL(`${path}${name}`,import.meta.url).href;
+        }
+    },
+    mounted() {
     }
-},
-methods: {
-},
-mounted() {
-}
 }
 </script>
 
 <template>
-
     <h1>Questo è il main</h1>
 
     <Jumbotron />
