@@ -12,19 +12,16 @@ export default{
   data(){
     return{
       store,
-      percorso : "./assets/img/"
     }
   },
   methods:{
   },
   mounted(){
-    console.log(`${this.percorso} `)
   }
 }
 </script>
 
 <template>
-  <img :src="this.percorso + store.immagini.jumbotron[0]" alt="">
   <MyAppHeader />
   <MyAppMain />
   <MyAppFooter />

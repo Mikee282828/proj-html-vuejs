@@ -9,7 +9,7 @@ export default{
 </script>
 
 <template>
-    <h1>Jumbotron</h1>
+    <h1>Questo è Bigvideo</h1>
 </template>
 
 <style scoped></style>
