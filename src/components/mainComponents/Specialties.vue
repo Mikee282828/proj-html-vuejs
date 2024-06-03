@@ -9,8 +9,8 @@ export default {
         cardInfo: Array
     },
     methods: {
-        getImg(path, name) {
-            return new URL(`${path}${name}`, import.meta.url).href;
+        getSvg(name) {
+            return new URL(`../../assets/svg/${name}`, import.meta.url).href;
         }
     }
 }
@@ -28,7 +28,7 @@ export default {
             <!-- specialties cards -->
             <div class="row">
                 <div class="col-3 text-center" v-for="element in cardInfo">
-                    <img class="mb-3" :src="getImg('../../assets/svg/', element.img)" alt="">
+                    <img class="mb-3" :src="getSvg(element.img)" alt="">
                     <h5>{{ element.title }}</h5>
                     <p>Lorem, ipsum dolor sit amet consect</p>
                 </div>
