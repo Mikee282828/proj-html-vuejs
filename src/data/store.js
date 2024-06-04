@@ -80,7 +80,7 @@ const store = reactive({
         },
         {
             event: "Melbourne Coaching",
-            date: "2022-1-7",
+            date: "2022-1-11",
             startTime: "9:00 am",
             finishTime: "5:00 pm",
             location: "Cambridge, MA 02138, USA",

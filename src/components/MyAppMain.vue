@@ -30,7 +30,7 @@ export default {
     },
     data() {
         return {
-            store
+            store,
         }
     },
     methods: {
@@ -46,7 +46,7 @@ export default {
     <Jumbotron />
     <Specialties :cardInfo="store.immagini.skillsIcon"/>
     <Founder :foundersImg="store.immagini.foundersImg"/>
-    <Events />
+    <Events :events="store.events" />
     <Stats />
     <News />
     <Testimonials />
