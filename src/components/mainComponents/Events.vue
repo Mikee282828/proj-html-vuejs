@@ -9,7 +9,17 @@ export default{
 </script>
 
 <template>
-    <h1>Questo è Events</h1>
+    <div class="bkg_image mt-5">
+
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.bkg_image{
+    background-image: url("../../assets/img/h1-img-09.jpg");
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:50vw;
+}
+</style>
