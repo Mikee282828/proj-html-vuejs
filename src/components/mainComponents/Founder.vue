@@ -21,24 +21,41 @@ export default {
     <div class="bkg_fafafa py-5">
         <div class="my_container">
             <div class="row justify-content-center align-items-center g-0">
-                <div class="col-4 my_cardLx">
+                <div class="col-5 my_cardLx">
                     <div class="my_carousel w-100" v-for="element, index in foundersImg">
                         <img :src="getSvg(element, false)" alt="founder" class="w-100" v-show="index == 0">
                     </div>
                 </div>
-                <div class="col-4 my_cardRx">
-                    <div class="my_description w-100 py-5 px-4">
+                <div class="col-5 my_cardRx">
+                    <div class="my_description w-100 py-5 px-5">
                         <h2>
                             Jason Bickford
                         </h2>
-                        <p>
+                        <p class="text-secondary">
                             Founder and Executive Director
                         </p>
                         <div class="my_separator"></div>
-                        <p>
+                        <p class="text-body-tertiary">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas possimus, ut nemo fugit
                             vero quas...
                         </p>
+                        <div class="row justify-content-between">
+                            <div class="col">
+                                <a class="my_socialIcon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a class="my_socialIcon">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a class="my_socialIcon">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <!-- spazio per eventuale firma -->
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -52,12 +69,34 @@ export default {
 </template>
 
 <style scoped>
-.my_container{
+.my_socialIcon {
+    text-decoration: none;
+    color: white;
+
+}
+
+.my_socialIcon i {
+    background-color: rgb(255, 70, 18);
+    padding: 0.4rem;
+    font-size: 1rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+.my_container {
     max-width: 2000px;
-    position:relative;
-    margin:0 auto;
+    position: relative;
+    margin: 0 auto;
     z-index: 0;
 }
+
 .my_cardLx {
     margin-right: -2rem;
 }
