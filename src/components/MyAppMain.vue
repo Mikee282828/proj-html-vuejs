@@ -41,7 +41,6 @@ export default {
 </script>
 
 <template>
-    <h1>Questo è il main</h1>
 
     <Jumbotron />
     <Specialties :cardInfo="store.immagini.skillsIcon"/>

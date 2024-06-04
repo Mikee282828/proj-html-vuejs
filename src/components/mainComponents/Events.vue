@@ -75,7 +75,7 @@ export default {
 <template>
     <div class="bkg_image mt-5">
         <div class="row g-0 justify-content-center h-100">
-            <div class="col-4 my_eventMinWidth">
+            <div class="col-4 my_eventWidth">
                 <div class="my_upcomingEvents">
                     <header class="p-3">
                         <h3>Upcoming Events</h3>
@@ -159,7 +159,11 @@ export default {
     color: #FF4612;
     width:2rem;
 }
-.my_eventMinWidth{
+.my_eventWidth{
     min-width: 450px;
+    max-width:480px;
+}
+.my_eventDescription{
+    cursor: pointer;
 }
 </style>
