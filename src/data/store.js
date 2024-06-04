@@ -18,7 +18,6 @@ const store = reactive({
             img:"svg-3.svg",
             title:"Contact"
         }],
-        
         foundersImg: ["h1-img-03.jpg","h1-img-01.jpg","h1-img-02.jpg"],
         blog: ["h1-blog-img-01.jpg","h1-blog-img-02.jpg","h1-blog-img-03.jpg","h1-blog-img-04.jpg"],
         testimonialsAvatar:[
