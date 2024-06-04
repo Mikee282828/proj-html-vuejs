@@ -51,7 +51,7 @@ export default {
 }
 
 .my_separator {
-    border: solid 0.1rem #FF4612;
+    border: solid 0.08rem #FF4612;
     width: 5rem;
     position: relative;
     left: 50%;
