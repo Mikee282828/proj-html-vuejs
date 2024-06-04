@@ -17,24 +17,32 @@ export default {
             this.timer1 = setInterval(() => {
                 if (this.mentorship < 78) {
                     this.mentorship++;
+                } else if (this.mentorship == 78) {
+                    clearInterval(this.timer1)
                 }
             }, 2000 / 78);
 
             this.timer2 = setInterval(() => {
                 if (this.education < 95) {
                     this.education++;
+                } else if (this.mentorship == 95) {
+                    clearInterval(this.timer2)
                 }
             }, 2000 / 95);
 
             this.timer3 = setInterval(() => {
                 if (this.learning < 65) {
                     this.learning++;
+                } else if (this.mentorship == 65) {
+                    clearInterval(this.timer3)
                 }
             }, 2000 / 65);
 
             this.timer4 = setInterval(() => {
                 if (this.motivation < 83) {
                     this.motivation++;
+                } else if (this.mentorship == 83) {
+                    clearInterval(this.timer4)
                 }
             }, 2000 / 83);
         }
@@ -110,9 +118,11 @@ export default {
 .my_textOrange {
     color: #FF4612;
 }
-.my_stat{
-    margin-bottom:2rem;
+
+.my_stat {
+    margin-bottom: 2rem;
 }
+
 .my_statBar {
     width: 100%;
     border-bottom: solid rgba(0, 0, 0, 0.223) 1px;
@@ -122,7 +132,7 @@ export default {
 .row {
     max-width: 1400px;
     margin: 0 auto;
-    padding:7rem;
+    padding: 7rem;
 }
 
 .my_statBarBase {
@@ -130,51 +140,63 @@ export default {
     animation-duration: 2s;
     background-color: #FF4612;
 }
-.my_stat78{
+
+.my_stat78 {
     width: 78%;
     animation-name: statBar78;
 }
-.my_stat95{
+
+.my_stat95 {
     width: 95%;
     animation-name: statBar95;
 }
-.my_stat65{
+
+.my_stat65 {
     width: 65%;
     animation-name: statBar65;
 }
-.my_stat83{
+
+.my_stat83 {
     width: 83%;
     animation-name: statBar83;
 }
+
 @keyframes statBar78 {
-    from{
+    from {
         width: 0%;
     }
-    to{
+
+    to {
         width: 78%;
     }
 }
+
 @keyframes statBar95 {
-    from{
+    from {
         width: 0%;
     }
-    to{
+
+    to {
         width: 95%;
     }
 }
+
 @keyframes statBar65 {
-    from{
+    from {
         width: 0%;
     }
-    to{
+
+    to {
         width: 65%;
     }
 }
+
 @keyframes statBar83 {
-    from{
+    from {
         width: 0%;
     }
-    to{
+
+    to {
         width: 83%;
     }
 }
