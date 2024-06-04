@@ -10,6 +10,13 @@ export default{
 
 <template>
     <h1>Questo è Founder</h1>
+    <div class="container">
+        
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+    background-color: #FFFFFF;
+}
+</style>

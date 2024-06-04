@@ -34,9 +34,6 @@ export default {
         }
     },
     methods: {
-        getImg(path,name){
-            return new URL(`${path}${name}`,import.meta.url).href;
-        }
     },
     mounted() {
     }
