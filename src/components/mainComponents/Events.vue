@@ -74,8 +74,8 @@ export default {
 
 <template>
     <div class="bkg_image mt-5">
-        <div class="row g-0 align-items-center justify-content-center h-100">
-            <div class="col-4">
+        <div class="row g-0 justify-content-center h-100">
+            <div class="col-4 my_eventMinWidth">
                 <div class="my_upcomingEvents">
                     <header class="p-3">
                         <h3>Upcoming Events</h3>
@@ -135,7 +135,8 @@ export default {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 50vw;
+    padding:5rem;
+    min-width:1200px;
 }
 
 .my_upcomingEvents>header,
@@ -157,5 +158,8 @@ export default {
 .my_eventTime>i,.my_eventLocation>i{
     color: #FF4612;
     width:2rem;
+}
+.my_eventMinWidth{
+    min-width: 450px;
 }
 </style>
