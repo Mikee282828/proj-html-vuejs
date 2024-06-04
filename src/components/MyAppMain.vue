@@ -45,7 +45,7 @@ export default {
 
     <Jumbotron />
     <Specialties :cardInfo="store.immagini.skillsIcon"/>
-    <Founder />
+    <Founder :foundersImg="store.immagini.foundersImg"/>
     <Events />
     <Stats />
     <News />
