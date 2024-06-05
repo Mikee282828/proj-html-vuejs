@@ -1,4 +1,5 @@
 <script>
+import { ref } from "vue";
 export default {
     data() {
         return {
@@ -49,6 +50,12 @@ export default {
     },
     mounted() {
         this.toPercentage();
+        const observer = new IntersectionObserver(
+            entries => {
+
+            }
+        )
+        // console.log(this.$refs.mystat78);
     }
 }
 </script>
@@ -66,13 +73,14 @@ export default {
             </div>
         </div>
         <div class="col-5">
+
             <div class="my_stat">
                 <div class="my_statText d-flex justify-content-between">
                     <h5>Mentorship</h5>
                     <h5>{{ mentorship }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat78"></div>
+                    <div class="my_statBarBase my_stat78" ref="mystat78"></div>
                 </div>
             </div>
 
@@ -82,7 +90,7 @@ export default {
                     <h5>{{ education }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat95"></div>
+                    <div class="my_statBarBase my_stat95" ref="mystat95"></div>
                 </div>
             </div>
 
@@ -92,7 +100,7 @@ export default {
                     <h5>{{ learning }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat65"></div>
+                    <div class="my_statBarBase my_stat65" ref="mystat65"></div>
                 </div>
             </div>
 
@@ -102,7 +110,7 @@ export default {
                     <h5>{{ motivation }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat83"></div>
+                    <div class="my_statBarBase my_stat83" ref="mystat83"></div>
                 </div>
             </div>
         </div>
