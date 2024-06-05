@@ -104,7 +104,7 @@ export default {
 
 <template>
     <div class="row justify-content-center">
-        <div class="col-5">
+        <div class="col-6">
             <div class="my_title pb-5">
                 <h2 class="">Creative Leader<span class="my_textOrange">.</span></h2>
                 <div class="my_separator my-3"></div>
@@ -114,7 +114,7 @@ export default {
                 <p><strong>READ MORE</strong></p>
             </div>
         </div>
-        <div class="col-5">
+        <div class="col-6">
 
             <div class="my_stat">
                 <div class="my_statText d-flex justify-content-between">
@@ -185,7 +185,7 @@ export default {
 }
 
 .row {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 7rem;
 }
@@ -193,7 +193,7 @@ export default {
 .my_statBarBase {
     width: 0%;
     height: 3px;
-    transition: 2s;
+    transition: 3s;
 }
 
 .my_stat78 {
