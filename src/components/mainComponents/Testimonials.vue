@@ -31,7 +31,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* color: white; */
+    color: white;
 }
 
 .testimonials i {

@@ -133,7 +133,7 @@ export default {
     padding: 8px 0px;
     gap: 8px;
     margin-top: 20px;
-    /* color:white; */
+    color:white;
 }
 
 .btn-form p {
