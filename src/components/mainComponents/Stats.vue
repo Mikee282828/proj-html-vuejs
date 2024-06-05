@@ -14,48 +14,90 @@ export default {
         }
     },
     methods: {
-        toPercentage() {
-            this.timer1 = setInterval(() => {
-                if (this.mentorship < 78) {
-                    this.mentorship++;
-                } else if (this.mentorship == 78) {
-                    clearInterval(this.timer1)
-                }
-            }, 2000 / 78);
-
-            this.timer2 = setInterval(() => {
-                if (this.education < 95) {
-                    this.education++;
-                } else if (this.mentorship == 95) {
-                    clearInterval(this.timer2)
-                }
-            }, 2000 / 95);
-
-            this.timer3 = setInterval(() => {
-                if (this.learning < 65) {
-                    this.learning++;
-                } else if (this.mentorship == 65) {
-                    clearInterval(this.timer3)
-                }
-            }, 2000 / 65);
-
-            this.timer4 = setInterval(() => {
-                if (this.motivation < 83) {
-                    this.motivation++;
-                } else if (this.mentorship == 83) {
-                    clearInterval(this.timer4)
-                }
-            }, 2000 / 83);
-        }
     },
     mounted() {
-        this.toPercentage();
-        const observer = new IntersectionObserver(
-            entries => {
 
-            }
-        )
-        // console.log(this.$refs.mystat78);
+        const observer78 = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("my_stat78", entry.isIntersecting);
+                    if (entry.isIntersecting) {
+                        this.mentorship = 0;
+                        this.timer1 = setInterval(() => {
+                            if (this.mentorship < 78) {
+                                this.mentorship++;
+                            } else if (this.mentorship == 78) {
+                                clearInterval(this.timer1)
+                            }
+                        }, 2000 / 78);
+                        // observer78.unobserve(entry.target);
+                    }
+                })
+            },
+        );
+        observer78.observe(this.$refs.mystat78);
+
+
+        const observer95 = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("my_stat95", entry.isIntersecting);
+                    if (entry.isIntersecting) {
+                        this.education = 0;
+                        this.timer2 = setInterval(() => {
+                            if (this.education < 95) {
+                                this.education++;
+                            } else if (this.mentorship == 95) {
+                                clearInterval(this.timer2)
+                            }
+                        }, 2000 / 95);
+                        // observer95.unobserve(entry.target);
+                    }
+                })
+            },
+        );
+        observer95.observe(this.$refs.mystat95);
+
+        const observer65 = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("my_stat65", entry.isIntersecting);
+                    if (entry.isIntersecting) {
+                        this.learning = 0;
+                        this.timer3 = setInterval(() => {
+                            if (this.learning < 65) {
+                                this.learning++;
+                            } else if (this.mentorship == 65) {
+                                clearInterval(this.timer3)
+                            }
+                        }, 2000 / 65);
+                        // observer65.unobserve(entry.target);
+                    }
+                })
+            },
+        );
+        observer65.observe(this.$refs.mystat65);
+
+        const observer83 = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("my_stat83", entry.isIntersecting);
+                    if (entry.isIntersecting) {
+                        this.motivation = 0;
+                        this.timer4 = setInterval(() => {
+                            if (this.motivation < 83) {
+                                this.motivation++;
+                            } else if (this.mentorship == 83) {
+                                clearInterval(this.timer4)
+                            }
+                        }, 2000 / 83);
+                        // observer83.unobserve(entry.target);
+                    }
+                })
+            },
+        );
+        observer83.observe(this.$refs.mystat83);
+
     }
 }
 </script>
@@ -80,7 +122,7 @@ export default {
                     <h5>{{ mentorship }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat78" ref="mystat78"></div>
+                    <div class="my_statBarBase" ref="mystat78"></div>
                 </div>
             </div>
 
@@ -90,7 +132,7 @@ export default {
                     <h5>{{ education }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat95" ref="mystat95"></div>
+                    <div class="my_statBarBase" ref="mystat95"></div>
                 </div>
             </div>
 
@@ -100,7 +142,7 @@ export default {
                     <h5>{{ learning }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat65" ref="mystat65"></div>
+                    <div class="my_statBarBase" ref="mystat65"></div>
                 </div>
             </div>
 
@@ -110,7 +152,7 @@ export default {
                     <h5>{{ motivation }}%</h5>
                 </div>
                 <div class="my_statBar">
-                    <div class="my_statBarBase my_stat83" ref="mystat83"></div>
+                    <div class="my_statBarBase" ref="mystat83"></div>
                 </div>
             </div>
         </div>
@@ -149,68 +191,28 @@ export default {
 }
 
 .my_statBarBase {
+    width: 0%;
     height: 3px;
-    animation-duration: 2s;
-    background-color: #FF4612;
+    transition: 2s;
 }
 
 .my_stat78 {
     width: 78%;
-    animation-name: statBar78;
+    background-color: #FF4612;
 }
 
 .my_stat95 {
     width: 95%;
-    animation-name: statBar95;
+    background-color: #FF4612;
 }
 
 .my_stat65 {
     width: 65%;
-    animation-name: statBar65;
+    background-color: #FF4612;
 }
 
 .my_stat83 {
     width: 83%;
-    animation-name: statBar83;
-}
-
-@keyframes statBar78 {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 78%;
-    }
-}
-
-@keyframes statBar95 {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 95%;
-    }
-}
-
-@keyframes statBar65 {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 65%;
-    }
-}
-
-@keyframes statBar83 {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 83%;
-    }
+    background-color: #FF4612;
 }
 </style>
