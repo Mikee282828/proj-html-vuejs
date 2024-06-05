@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         nextImage() {
-            clearInterval(this.timer);
+            clearInterval(this.timer)
             if (this.bgActive >= 2) {
                 this.bgActive = 0
 
@@ -37,13 +37,11 @@ export default {
         },
 
         prevImage() {
-            clearInterval(this.timer);
             if (this.bgActive <= 0) {
                 this.bgActive = 2
             } else {
                 this.bgActive--;
             };
-            this.timer = setInterval(this.nextImage, 2000);
         }
 
     },
@@ -64,9 +62,9 @@ export default {
         <div class="container cardHeader">
 
             <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft">⟵</a>
-
-            <CardJumbotron />
-
+            <!-- CARD JUMBOTRON -->
+            <CardJumbotron :active="bgActive" />
+            <!-- CARD JUMBOTRON -->
             <a @click="nextImage()" class="text-dark btn fs-1 arrowRight">⟶</a>
 
         </div>
@@ -90,13 +88,16 @@ export default {
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
 }
 
+
+
 .cardHeader {
     color: black;
     display: flex;
     justify-content: start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     height: calc(100% - 178px);
     align-items: center;
+    margin-left: 10%;
 
 }
 
