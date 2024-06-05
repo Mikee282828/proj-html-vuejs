@@ -90,8 +90,6 @@ export default {
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
 }
 
-
-
 .cardHeader {
     color: black;
     display: flex;
@@ -102,13 +100,13 @@ export default {
 
 }
 
-/* .arrowLeft {
-    position: relative;
-    right: 10rem;
+.arrowLeft {
+    position: absolute;
+    left: 3%;
 }
 
 .arrowRight {
-    position: relative;
-    left: 22rem;
-} */
+    position: absolute;
+    right: 3%;
+}
 </style>
