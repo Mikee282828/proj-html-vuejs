@@ -210,4 +210,7 @@ export default {
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
+h2{
+    color:white;
+}
 </style>
