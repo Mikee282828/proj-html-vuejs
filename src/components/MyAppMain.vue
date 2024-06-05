@@ -1,6 +1,5 @@
 <script>
 import store from "../data/store.js";
-import Jumbotron from "./mainComponents/Jumbotron.vue";
 import Achievements from "./mainComponents/Achievements.vue";
 import Bigvideo from "./mainComponents/Bigvideo.vue";
 import Contacts from "./mainComponents/Contacts.vue";
@@ -15,7 +14,6 @@ import Testimonials from "./mainComponents/Testimonials.vue";
 export default {
     name: "MyAppMain",
     components: {
-        Jumbotron,
         Achievements,
         Bigvideo,
         Contacts,
@@ -42,7 +40,6 @@ export default {
 
 <template>
 
-    <Jumbotron />
     <Specialties :cardInfo="store.immagini.skillsIcon"/>
     <Founder :foundersImg="store.immagini.foundersImg"/>
     <Events :events="store.events" />
