@@ -47,10 +47,7 @@ export default {
     <News />
     <Testimonials />
     <Bigvideo />
-    <Achievements />
-    <Staff />
     <Contacts />
-    <Plans />
 
 </template>
 
