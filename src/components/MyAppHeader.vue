@@ -37,11 +37,13 @@ export default {
         },
 
         prevImage() {
+            clearInterval(this.timer);
             if (this.bgActive <= 0) {
                 this.bgActive = 2
             } else {
                 this.bgActive--;
             };
+            this.timer = setInterval(this.nextImage, 2000);
         }
 
     },
