@@ -110,6 +110,11 @@ export default {
 </template>
 
 <style scoped>
+.row {
+    background-color: #FAFAFA;
+    color: black;
+}
+
 .my_separator {
     border: solid 0.08rem #FF4612;
     width: 5rem;

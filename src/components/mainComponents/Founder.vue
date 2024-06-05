@@ -4,6 +4,12 @@ export default {
     props: {
         foundersImg: Array
     },
+    data() {
+        return {
+            timer: null,
+            active: 0,
+        }
+    },
     methods: {
         getSvg(name, isSvg) {
             if (isSvg) {
@@ -11,7 +17,37 @@ export default {
             } else {
                 return new URL(`../../assets/img/${name}`, import.meta.url).href;
             }
+        },
+        nextImg() {
+            clearInterval(this.timer);
+            if (this.active == 2) {
+                this.active = 0;
+            } else {
+                this.active++;
+            }
+            this.timer = setInterval(this.nextImg, 5000);
+        },
+        prevImg() {
+            clearInterval(this.timer);
+            if (this.active == 0) {
+                this.active = 2;
+            } else {
+                this.active--;
+            }
+            this.timer = setInterval(this.prevImg, 5000);
+        },
+        activeImg(index) {
+            if (index == this.active) {
+                return true;
+            } else {
+                return false;
+            }
         }
+    },
+    mounted() {
+        this.timer = setInterval(() => {
+            this.nextImg();
+        }, 5000);
     }
 }
 </script>
@@ -21,11 +57,25 @@ export default {
     <div class="bkg_fafafa py-5">
         <div class="my_container">
             <div class="row justify-content-center align-items-center g-0">
-                <div class="col-5 my_cardLx">
-                    <div class="my_carousel w-100" v-for="element, index in foundersImg">
-                        <img :src="getSvg(element, false)" alt="founder" class="w-100" v-show="index == 0">
+
+                <!-- CAROUSEL -->
+                <div class="col-5 my_cardLx position-relative">
+
+                    <div class="my_carousel w-100 h-100" v-for="element, index in foundersImg"
+                        v-show="activeImg(index)">
+                        <img :src="getSvg(element, false)" class="w-100">
+                    </div>
+                    <div class="my_buttons">
+                        <div @click="prevImg()" class="d-inline">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </div>
+                        <div @click="nextImg()" class="d-inline ms-3">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
                     </div>
                 </div>
+
+                <!-- DESCRIPTION -->
                 <div class="col-5 my_cardRx">
                     <div class="my_description w-100 py-5 px-5">
                         <h2>
@@ -132,5 +182,24 @@ p {
 .my_bkgCircle>img {
     object-fit: cover;
     max-width: 100%;
+}
+
+.my_cardLx .my_buttons {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #FF4612;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.my_carousel {
+    position: relative;
+    z-index: -1;
+}
+
+.my_buttons div {
+    cursor: pointer;
 }
 </style>

@@ -137,6 +137,7 @@ export default {
     width: 100%;
     padding:5rem;
     min-width:1200px;
+    color:black;
 }
 
 .my_upcomingEvents>header,
