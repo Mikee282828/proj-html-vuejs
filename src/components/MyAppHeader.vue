@@ -78,16 +78,19 @@ export default {
 .bgHeader-1 {
     height: 100vh;
     background-image: url(../assets/img/h1-rev-img-01.jpg);
+    background-size: cover;
 }
 
 .bgHeader-2 {
     height: 100vh;
     background-image: url(../assets/img/rev-slider-main-home-img-02.png);
+    background-size: cover;
 }
 
 .bgHeader-3 {
     height: 100vh;
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
+    background-size: cover;
 }
 
 
