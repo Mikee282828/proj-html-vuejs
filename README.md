@@ -11,7 +11,7 @@
 ### NavBar
 - Questo componente si collega alla MyAppHeader includendo tutta la navbar con le varie sezioni e link.
 ### CardJumbotron
-- Questo componente si collega alla MyAppHeader includento una card contenente titolo testo e pulsanti che variano in base a delle varibili di un array, qyeste card variano con il variare del background attraverso dei botton prev e next.
+- Questo componente si collega alla MyAppHeader includendo una card contenente titolo testo e pulsanti che variano in base a delle varibili di un array, qyeste card variano con il variare del background attraverso dei botton prev e next.
 ## MyAppMain
 - In MyAppMain ci sono tutte le sezioni che compongono il corpo della nostra pagina web.
 ### Specialties
