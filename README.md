@@ -20,7 +20,7 @@ prende in ingresso delle props che contengono i file svg.
 ### Events
 - Events è il componente che mostra in modo dinamico tutti gli eventi futuri, prende in ingresso come props un oggetto che ha i dati riguardanti l'evento.
 ### Stats
--Stats è il componente che mostra in pagina le barre percentuali e non prende niente in ingresso.
+- Stats è il componente che mostra in pagina le barre percentuali e non prende niente in ingresso.
 ### News
 -
 ### Testimonials
