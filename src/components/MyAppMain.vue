@@ -44,10 +44,10 @@ export default {
     <Founder :foundersImg="store.immagini.foundersImg"/>
     <Events :events="store.events" />
     <Stats />
-    <News />
-    <Testimonials />
+    <News :blogImg="store.immagini.blog"/>
+    <Testimonials :testImg="store.immagini.testimonialsAvatar"/>
     <Bigvideo />
-    <Contacts />
+    <Contacts :sponsorImg="store.immagini.logos"/>
 
 </template>
 

@@ -11,12 +11,7 @@ export default {
         }
     },
     methods: {
-        showElements() {
-            this.elementsVisible = true;
-        },
-        hideElements() {
-            this.elementsVisible = false;
-        }
+
 
 
 
@@ -39,9 +34,9 @@ export default {
             <div class="dropdown d-flex">
 
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class=" orange_text pe-4  fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         HOMES
                     </a>
@@ -52,9 +47,9 @@ export default {
                 </div>
 
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class="orange_text pe-4  fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         PAGES
                     </a>
@@ -67,7 +62,7 @@ export default {
 
                 <div class="text-dark">⟶</div>
                 <div class="dropdown">
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class="orange_text pe-4 fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         BLOG
                     </a>
@@ -78,10 +73,10 @@ export default {
                     </div>
                 </div>
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
 
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class=" pe-4 orange_text fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         SHOP
                     </a>
@@ -91,10 +86,10 @@ export default {
                     </div>
                 </div>
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
 
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class="orange_text pe-4  fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         EVENTS
                     </a>
@@ -104,12 +99,12 @@ export default {
                     </div>
                 </div>
 
-                <span class="text-dark arrow">⟶</span>
+                <span class="arrow">⟶</span>
 
                 <div>
 
-                    <a class="pe-4 dropdown-item text-dark fw-bold" href="#" data-bs-toggle="collapse"
-                        data-bs-target="#collapseContent" aria-expanded="false">
+                    <a class="pe-4 orange_text fw-bold" href="#" data-bs-toggle="collapse"
+                        data-bs-target="#collapseElements" aria-expanded="false">
                         ELEMENTS
                     </a>
 
@@ -120,16 +115,36 @@ export default {
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
 
-                <a class="dropdown-item pe-3 text-dark fw-bold" href="#">
+
+                <a class="dropdown-item pe-3 text-dark fw-bold" href="#" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="fa-solid fa-bars"></i>
                 </a>
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Everlead Theme.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus nisi earum, quam hic a
+                            magni? Vel voluptates, eum suscipit tempora nostrum necessitatibus earum ducimus perferendis
+                            quas alias iusto? Optio, eius?</p>
+                    </div>
+                </div>
+
+
+
+
+
 
             </div>
 
         </div>
     </nav>
 
-    <div id="collapseContent" class="bg-dark collapse elementsContainer ">
+    <div id="collapseElements" class="bg-dark collapse elementsContainer ">
         <div class="container d-flex">
             <div class="col-3 p-4">
                 <h2>Classic</h2>
@@ -181,9 +196,18 @@ export default {
 }
 
 .dropdown-menu {
-    background-color: black;
+    background-color: #212529;
     width: 17rem;
     padding: 1rem;
+}
+
+.orange_text {
+    text-decoration: none;
+    color: black;
+}
+
+.orange_text:hover {
+    color: #FF4612;
 }
 
 .dropdown-item {
@@ -200,6 +224,10 @@ export default {
     position: absolute;
     width: 100%;
 
+}
+
+.arrow {
+    color: #FF4612;
 }
 
 .elements {

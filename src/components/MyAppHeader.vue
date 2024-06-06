@@ -25,25 +25,23 @@ export default {
             clearInterval(this.timer)
             if (this.bgActive >= 2) {
                 this.bgActive = 0
-
+                
             } else {
                 this.bgActive++;
-
+                
             };
             this.timer = setInterval(this.nextImage, 2000);
-
+            
 
 
         },
 
         prevImage() {
-            clearInterval(this.timer);
             if (this.bgActive <= 0) {
                 this.bgActive = 2
             } else {
                 this.bgActive--;
             };
-            this.timer = setInterval(this.nextImage, 2000);
         }
 
     },
@@ -63,9 +61,9 @@ export default {
 
         <div class="container cardHeader">
 
-            <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft">⟵</a>
+            <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft"><img style="transform: rotate(180deg); filter: brightness(0) saturate(100%);" src="../assets/svg/svg-6.svg"></a>
             <!-- CARD JUMBOTRON -->
-            <CardJumbotron :active="bgActive" />
+            <CardJumbotron :active="bgActive"/>
             <!-- CARD JUMBOTRON -->
             <a @click="nextImage()" class="text-dark btn fs-1 arrowRight">⟶</a>
 
@@ -109,10 +107,12 @@ export default {
 .arrowLeft {
     position: absolute;
     left: 3%;
+
 }
 
 .arrowRight {
     position: absolute;
     right: 3%;
+    filter: brightness(0) saturate(100%);
 }
 </style>
